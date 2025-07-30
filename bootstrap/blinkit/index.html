@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Everything delivered in minutes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -26,7 +27,7 @@
         </form>
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link fs-5" href="#">Login</a>
+          <a class="nav-link fs-5" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
         </li>
        <li class="nav-item ms-md-5">
           <a class="btn btn-lg btn-secondary " href="#">My Cart</a>
@@ -78,7 +79,300 @@
             <img src="./images/categories/20.avif" alt="" class="img-category">
         </div>
     </section>
+
+    <section class="products my-3">
+        <div class="d-flex justify-content-between align-items-center">
+            <h4 class="fw-bold">Bread and Butter</h4>
+            <a href="#" class="text-decoration-none fw-bold text-success">see all</a>
+        </div>
+        <div class="row g-2">
+            <div class="col-6 col-md-2">
+                <div class="card">
+                    <img src="./images/bread_butter/Amul_Salted_Butter.avif" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <span class="eta"><i class="fa-regular fa-clock"></i> 10 MINS</span>
+                        <p class="p-name">Amul Salted Butter</p>
+                        <span class="quantity">100g</span>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price"><i class="fa-solid fa-indian-rupee-sign"></i>59</span>
+                            <button class="btn btn-sm btn-outline-success px-4">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-2">
+                <div class="card">
+                    <img src="./images/bread_butter/Morish_Classic_White_Bread.avif" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <span class="eta"><i class="fa-regular fa-clock"></i> 10 MINS</span>
+                        <p class="p-name">Morish Classic White Bread</p>
+                        <span class="quantity">400g</span>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price"><i class="fa-solid fa-indian-rupee-sign"></i>45</span>
+                            <button class="btn btn-sm btn-outline-success px-4">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-2">
+                <div class="card">
+                    <img src="./images/bread_butter/Morish_Sandwich_Brown_Bread.avif" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <span class="eta"><i class="fa-regular fa-clock"></i> 10 MINS</span>
+                        <p class="p-name">Morish Sandwich Brown Bread</p>
+                        <span class="quantity">400g</span>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price"><i class="fa-solid fa-indian-rupee-sign"></i>55</span>
+                            <button class="btn btn-sm btn-outline-success px-4">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-2">
+                <div class="card">
+                    <img src="./images/bread_butter/Omfed_Plain_Cup_Curd.avif" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <span class="eta"><i class="fa-regular fa-clock"></i> 10 MINS</span>
+                        <p class="p-name">Omfed Plain Cup Curd</p>
+                        <span class="quantity">400g</span>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price"><i class="fa-solid fa-indian-rupee-sign"></i>44</span>
+                            <button class="btn btn-sm btn-outline-success px-4">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-2">
+                <div class="card">
+                    <img src="./images/bread_butter/Omfed_Premimu_Cow_Milk.avif" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <span class="eta"><i class="fa-regular fa-clock"></i> 10 MINS</span>
+                        <p class="p-name">Omfed Premimu Cow Milk</p>
+                        <span class="quantity">500 ml</span>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price"><i class="fa-solid fa-indian-rupee-sign"></i>27</span>
+                            <button class="btn btn-sm btn-outline-success px-4">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-2">
+                <div class="card">
+                    <img src="./images/bread_butter/Omfed_Toned_Milk_Pouch_Curd.avif" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <span class="eta"><i class="fa-regular fa-clock"></i> 10 MINS</span>
+                        <p class="p-name">Omfed Toned Milk Pouch Curd</p>
+                        <span class="quantity">500g</span>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price"><i class="fa-solid fa-indian-rupee-sign"></i>45</span>
+                            <button class="btn btn-sm btn-outline-success px-4">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products my-3">
+        <div class="d-flex justify-content-between align-items-center">
+            <h4 class="fw-bold">Daily Grocery</h4>
+            <a href="#" class="text-decoration-none fw-bold text-success">see all</a>
+        </div>
+        <div class="row g-2">
+            <div class="col-6 col-md-2">
+                <div class="card">
+                    <img src="./images/grocery/Aashirvaad_Sudh_Chakki_Atta.avif" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <span class="eta"><i class="fa-regular fa-clock"></i> 10 MINS</span>
+                        <p class="p-name">Aashirvaad Sudh Chakki Atta</p>
+                        <span class="quantity">1 kg</span>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price"><i class="fa-solid fa-indian-rupee-sign"></i>159</span>
+                            <button class="btn btn-sm btn-outline-success px-4">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-2">
+                <div class="card">
+                    <img src="./images/grocery/Daawat Biryani_Basmati_Rice.avif" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <span class="eta"><i class="fa-regular fa-clock"></i> 10 MINS</span>
+                        <p class="p-name">Daawat Biryani Basmati Rice</p>
+                        <span class="quantity">1 kg</span>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price"><i class="fa-solid fa-indian-rupee-sign"></i>299</span>
+                            <button class="btn btn-sm btn-outline-success px-4">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-2">
+                <div class="card">
+                    <img src="./images/grocery/Fortune_Chakki_Fresh_Atta.avif" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <span class="eta"><i class="fa-regular fa-clock"></i> 10 MINS</span>
+                        <p class="p-name">Fortune Chakki Fresh Atta</p>
+                        <span class="quantity">500g</span>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price"><i class="fa-solid fa-indian-rupee-sign"></i>179</span>
+                            <button class="btn btn-sm btn-outline-success px-4">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-2">
+                <div class="card">
+                    <img src="./images/grocery/Fortune_Soya_Chunks.avif" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <span class="eta"><i class="fa-regular fa-clock"></i> 10 MINS</span>
+                        <p class="p-name">Fortune Soya Chunks</p>
+                        <span class="quantity">500g</span>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price"><i class="fa-solid fa-indian-rupee-sign"></i>80</span>
+                            <button class="btn btn-sm btn-outline-success px-4">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-2">
+                <div class="card">
+                    <img src="./images/grocery/India_Gate_Super_Basmati_Rice.avif" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <span class="eta"><i class="fa-regular fa-clock"></i> 10 MINS</span>
+                        <p class="p-name">India Gate Super Basmati Rice</p>
+                        <span class="quantity">1 kg</span>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price"><i class="fa-solid fa-indian-rupee-sign"></i>350</span>
+                            <button class="btn btn-sm btn-outline-success px-4">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-2">
+                <div class="card">
+                    <img src="./images/grocery/Whole_Farm_premium_Red_Rajma.avif" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <span class="eta"><i class="fa-regular fa-clock"></i> 10 MINS</span>
+                        <p class="p-name">Whole Farm premium Red Rajma</p>
+                        <span class="quantity">500g</span>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price"><i class="fa-solid fa-indian-rupee-sign"></i>125</span>
+                            <button class="btn btn-sm btn-outline-success px-4">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="qlinks my-5">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <h5>Useful Links</h5>
+                <div class="d-flex justify-content-between">
+                    <ul>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Privacy</a></li>
+                        <li><a href="">Terms</a></li>
+                        <li><a href="">FAQs</a></li>
+                        <li><a href="">Security</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                    <ul>
+                         <li><a href="">Partner</a></li>
+                         <li><a href="">Franchise</a></li>
+                         <li><a href="">Seller</a></li>
+                         <li><a href="">Warehouse</a></li>
+                         <li><a href="">Deliver</a></li>
+                         <li><a href="">Resources</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="">Recipes</a></li>
+                        <li><a href="">Bistro</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <h5>Categories</h5>
+                <div class="d-flex justify-content-between">
+                    <ul>
+                        <li><a href="">Vegetables & Fruits</a></li>
+                        <li><a href="">Dairy & Breakfast</a></li>
+                        <li><a href="">Munchies</a></li>
+                        <li><a href="">Cold Drinks & Juices</a></li>
+                        <li><a href="">Instant & Frozen Food</a></li>
+                        <li><a href="">Tea, Coffee & Health Drinks</a></li>
+                        <li><a href="">Bakery & Biscuits</a></li>
+                        <li><a href="">Sweet Tooth</a></li>
+                        <li><a href="">Atta, Rice & Dal</a></li>
+                        <li><a href="">Dry Fruits, Masala & Oil</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="">Sauces & Spreads</a></li>
+                        <li><a href="">Chicken, Meat & Fish</a></li>
+                        <li><a href="">Paan Corner</a></li>
+                        <li><a href="">Organic & Premium</a></li>
+                        <li><a href="">Baby Care</a></li>
+                        <li><a href="">Pharma & Wellness</a></li>
+                        <li><a href="">Cleaning Essentials</a></li>
+                        <li><a href="">Home & Office</a></li>
+                        <li><a href="">Personal Care</a></li>
+                        <li><a href="">Pet Care</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="">Beauty & Cosmetics</a>
+                        <li><a href="">Fashion & Accessories</a>
+                        <li><a href="">Electronics & Electricals</a>
+                        <li><a href="">Stationery Needs</a>
+                        <li><a href="">Books</a>
+                        <li><a href="">Toys & Games</a>
+                        <li><a href="">Print Store</a>
+                        <li><a href="">E-Gift Cards</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-3 d-flex justify-content-between align-items-center">
+        <p class="copyright">&copy; Blinkit Commerce Private Limited, 2016-2025</p>
+        <div class="dapp">
+            <span class="fw-semibold">Download App</span>
+            <img src="./images/apple-app-store.webp" alt="" class="app-logo">
+            <img src="./images/play-store.webp" alt="" class="app-logo">
+        </div>
+        <div class="social-media-link">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-threads"></i>
+        </div>
+    </footer>
 </main>
+<!-- Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-body">
+        <div class="px-5 py-3 text-center">
+            <img src="./images/app_logo.svg" alt="">
+            <h4 class="fw-bold">India's last minute app</h4>
+            <p>Log in or Sign up</p>
+            <form action="">
+                <input type="text" class="form-control py-3" placeholder="Mobile Number">
+                <input type="submit" class="form-control btn btn-secondary py-3 my-3" value="Continue">
+            </form>
+            <p class="text-muted">By continuing, you agree to our Terms of service & Privacy policy</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
 
     <script src="./bootstrap/bootstrap.bundle.min.js"></script>
 </body>
