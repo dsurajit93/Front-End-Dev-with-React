@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="hh">JavaScript</h1>
+    <!-- <h1 id="hh1">CSS</h1>
+    <h1 id="hh2">HTML</h1> -->
+    <h1 style="background-color: yellow;" id="cm" onmouseover="changeText()" onmouseout="changeBack()">Catch Me</h1>
+
+    <button onclick="func1()" onmouseover="func2()">Click Me</button>
+    <br>
+    <p id="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem, vero cum ad fugit impedit culpa autem recusandae voluptatum officia eaque molestiae, deleniti numquam odio deserunt consequuntur. Hic officiis, facere non vel, inventore iure distinctio omnis saepe, fugiat impedit libero? Eaque unde eius quibusdam eligendi omnis totam odio, architecto alias facere delectus sit? Tenetur aut corrupti blanditiis odio eveniet voluptate sit unde veritatis pariatur facere eos molestiae voluptatem, esse dignissimos architecto vero illo facilis temporibus rem atque officiis in dolores ex! Ipsam sit ullam quas culpa doloribus. Temporibus et sit repellat dolorum fuga in quisquam nisi ipsum maiores, facere fugiat deserunt!</p>
+    <button onclick="showText()">Show</button>
+    <button onclick="hideText()">Hide</button>
+    <script>
+        // let heading = document.getElementById("hh")
+        // // heading.innerHTML = "Bootstrap"
+        // heading.style.color = 'red'
+        // heading.style.backgroundColor = 'yellow'
+
+        // // console.log(heading);
+        // let headings = document.getElementsByTagName("h1")
+        // console.log(headings)
+        // // headings[2].innerHTML = "HyperTextMarkupLangugae"
+
+        function func1(){
+            console.log("Button is CLicked")
+        }
+        function func2(){
+            console.log("Button is on the top of the button")
+        }
+
+        function changeText(){
+            document.getElementById("cm").innerHTML = "If You Can"
+        }
+
+        function changeBack(){
+            document.getElementById("cm").innerHTML = "Catch Me"
+        }
+
+        function hideText(){
+            document.getElementById("text").style.display = 'none';
+        }
+        function showText(){
+            document.getElementById("text").style.display = 'block';
+        }
+    </script>
+</body>
+</html>

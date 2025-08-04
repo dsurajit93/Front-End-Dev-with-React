@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="2.html" onsubmit="checkLeapYear(event)">
+        <label>Enter a Year</label>
+        <input type="text" id="year">
+        <input type="submit">
+    </form>
+    <p id="res"></p>
+
+    <script>
+        function checkLeapYear(event){
+            event.preventDefault()
+            let inp = document.getElementById("year").value
+            console.log(inp)
+            console.log(typeof(inp))
+            let msg = ""
+            if(inp == ""){
+                alert("Please enter an year")
+                return
+            } else if(isNaN(inp)){
+                alert("Enter a valid year")
+                return
+            } else{
+                inp = Number(inp)
+                if((inp%4==0 && inp%100!=0) || (inp%400 == 0)){
+                    msg = inp +" is leapyear"
+                } else {
+                    msg = inp+" is not leapyear"
+                }
+
+                document.getElementById("res").innerHTML = msg
+            }
+        }
+    </script>
+</body>
+</html>
