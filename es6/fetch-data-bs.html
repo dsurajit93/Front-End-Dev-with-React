@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <style>
+        .user-img{
+            height: 200px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container my-3">
+        <div id="data" class="d-flex flex-wrap gap-3">
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+    <script>
+        let url = "https://api.escuelajs.co/api/v1/users"
+
+        async function getUsersData(){
+            try {
+                let res = await fetch(url)
+                let users = await res.json();
+                console.log(users);
+
+                let userCards = "";
+
+                users.forEach((user) => {
+                    let {avatar, name, email} = user
+                    userCards = userCards + `
+                        <div class='card'>
+                            <img src="${avatar}" class="card-img-top user-img" >
+                            <div class="card-body">
+                                <h3>${name}</h3>
+                                <p>${email}</p>
+                            </div>
+                        </div>
+                    `
+                })
+                // console.log(userCards)
+                document.getElementById("data").innerHTML = userCards
+            } catch (error) {
+                console.log("Error: "+error)
+            }
+        }
+
+        getUsersData()
+    </script>
+</body>
+</html>
