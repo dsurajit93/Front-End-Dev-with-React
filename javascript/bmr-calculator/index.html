@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMR Calculator</title>
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+</head>
+<body>
+    <h1 class="bg-primary text-white py-2 text-center">BMR Calculator</h1>
+
+    <section class="container my-3">
+        <p class="lead fw-normal">
+            The Basal Metabolic Rate (BMR) Calculator estimates your basal metabolic rate—the amount of energy expended while at rest in a neutrally temperate environment, and in a post-absorptive state (meaning that the digestive system is inactive, which requires about 12 hours of fasting).
+        </p>
+        <div class="row g-3 my-3">
+            <div class="col-md-6">
+                <div class="card rounded-0">
+                    <div class="card-header bg-success text-white">
+                        <h3>Enter Your Data</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="" onsubmit="calculateBmr(event)">
+                            <input type="text" class="form-control p-3 mb-3" placeholder="Age" id="age">
+                            <input type="text" class="form-control p-3 mb-3" placeholder="Height in CM" id="height">
+                            <input type="text" class="form-control p-3 mb-3" placeholder="Weight in KG" id="weight">
+                            <div class="mb-3">
+                                <input type="radio" name="gender" class="form-check-input p-2" id="male"> Male
+                                <input type="radio" name="gender" class="form-check-input p-2" id="female"> Female
+                            </div>
+                            <input type="submit" class="btn btn-success" value="Calculate">
+                            <input type="reset" class="btn btn-secondary" value="Clear">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3 class="bg-success text-white p-3">Result</h3>
+                <h1>BMR = <span id="result">-</span> Calories/day</h1>
+            </div>
+        </div>
+    </section>
+    
+
+    <script src="./bootstrap/bootstrap.bundle.min.js"></script>
+    <script>
+        function calculateBmr(event){
+            event.preventDefault();
+
+            let age = document.getElementById("age").value
+            let height = document.getElementById("height").value
+            let weight = document.getElementById("weight").value
+
+            let male = document.getElementById("male").checked
+            let female = document.getElementById("female").checked
+
+            console.log(age, height, weight, male, female);
+
+            if( age=="" || height =="" || weight=="" || (!male && !female)){
+                alert("All the fields are required");
+                return;
+            }
+
+            if(isNaN(age) || isNaN(height) || isNaN(weight)){
+                alert("Please enter valid data");
+                return;
+            }
+
+            let bmr = 10*weight + 6.25*height - 5*age
+            if(male){
+                bmr = bmr + 5
+            } else if(female){
+                bmr = bmr - 161
+            }
+
+            document.getElementById("result").innerHTML = bmr
+        }
+    </script>
+</body>
+</html>
