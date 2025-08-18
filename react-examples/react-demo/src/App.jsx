@@ -5,6 +5,9 @@ import One from './components/One'
 import Two from './components/Two'
 import User from "./components/User"
 import Users from "./components/USers"
+import EventDemo from "./components/EventDemo"
+import Counter from "./components/Counter"
+import ShowHide from "./components/ShowHide"
 
 function App() {
   return (
@@ -17,7 +20,13 @@ function App() {
       <User name="tom" age="21" />
       <User name="spike" age="23" /> */}
 
-      <Users />
+      {/* <Users /> */}
+
+      {/* <EventDemo /> */}
+
+      {/* <Counter /> */}
+      {/* <Counter /> */}
+      <ShowHide />
     </>
   )
 }
