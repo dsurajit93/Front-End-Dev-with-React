@@ -8,6 +8,8 @@ import Users from "./components/USers"
 import EventDemo from "./components/EventDemo"
 import Counter from "./components/Counter"
 import ShowHide from "./components/ShowHide"
+import CurrencyConverter from "./components/CurrencyConverter"
+import Calculator from "./components/Calculator"
 
 function App() {
   return (
@@ -26,7 +28,11 @@ function App() {
 
       {/* <Counter /> */}
       {/* <Counter /> */}
-      <ShowHide />
+      {/* <ShowHide /> */}
+
+      {/* <CurrencyConverter /> */}
+
+      <Calculator />
     </>
   )
 }
