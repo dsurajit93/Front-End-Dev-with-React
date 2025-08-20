@@ -10,6 +10,9 @@ import Counter from "./components/Counter"
 import ShowHide from "./components/ShowHide"
 import CurrencyConverter from "./components/CurrencyConverter"
 import Calculator from "./components/Calculator"
+import Meals from "./components/Meals"
+
+import {BrowserRouter, Routes, Route, Link} from 'react-router-dom'
 
 function App() {
   return (
@@ -32,7 +35,23 @@ function App() {
 
       {/* <CurrencyConverter /> */}
 
-      <Calculator />
+      {/* <Calculator /> */}
+
+      {/* <Meals /> */}
+
+      <BrowserRouter>
+      <nav className="bg-primary text-white text-center py-3">
+        <Link to="/" className="mx-3 text-white">Calculator</Link>
+        <Link to="/cc" className="mx-3 text-white">Currency Converter</Link>
+        <Link to="/meals" className="mx-3 text-white">Meals</Link>
+      </nav>
+      
+      <Routes>
+        <Route path="/" element={<Calculator />} />
+        <Route path="/cc" element={<CurrencyConverter />} />
+        <Route path="/meals" element={<Meals />} />
+      </Routes>
+      </BrowserRouter>
     </>
   )
 }

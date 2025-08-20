@@ -21,13 +21,16 @@ function CurrencyConverter() {
   }
 
   return (
-    <div className="m-5">
-      <form method="post">
+    <div className="row my-4">
+      <div className="col-md-4 mx-auto">
+      <h1>Currency Converter</h1>
+       <form method="post">
         <label>United States Dollar</label> <br />
         <input 
             type="text" 
             value={usd} 
             onChange={usdToInr} 
+            className="form-control"
         /> 
         <br />
         <label>Indian Rupee</label> <br />
@@ -35,9 +38,12 @@ function CurrencyConverter() {
             type="text" 
             value={inr} 
             onChange={inrToUsd} 
+            className="form-control"
         /> 
         <br />
       </form>
+      </div>
+     
     </div>
   );
 }
